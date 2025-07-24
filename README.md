@@ -11,6 +11,7 @@ solicita que las contribuciones incluyan comentarios y variables en la lengua
 española.
 
 ## Esquema de directorios
+```
 minibloq/
 ├── include/              # Archivos de cabecera públicos (.h)
 │   ├── parser.h          # Parser de la app
@@ -26,3 +27,4 @@ minibloq/
 ├── CMakeLists.txt        # CMake raíz que orquesta todo
 ├── LICENSE
 └── README.md
+```
