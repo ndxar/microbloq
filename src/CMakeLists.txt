@@ -1,6 +1,7 @@
 #Archivos fuente de nuestras lobrerias
 set(LIB_SOURCES
   ${PROJECT_SOURCE_DIR}/src/parser.c
+  ${PROJECT_SOURCE_DIR}/src/lista.c
   #Con este formato hay que agregar los otros .c
 )
 

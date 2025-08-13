@@ -13,18 +13,20 @@ española.
 ## Esquema de directorios
 ```
 minibloq/
-├── include/              # Archivos de cabecera públicos (.h)
-│   ├── parser.h          # Parser de la app
+├── include/                # Archivos de cabecera públicos (.h)
+│   ├── parser.h            # Parser de la app
+│   ├── lista.h             # Definición de lista genérica
 │   └── xxxxxx.h
-├── src/                  # Código fuente de los módulos (.c)
-│   ├── CMakeLists.txt    # CMake para compilar la librería estática
-│   ├── parser.c          # Parser de la app
+├── src/                    # Código fuente de los módulos (.c)
+│   ├── CMakeLists.txt      # CMake para compilar la librería estática
+│   ├── parser.c            # Parser de la app
+│   ├── lista.c             # Implementación de lista genérica
 │   └── xxxxxx.c
-├── main/                 # Código fuente del programa principal
-│   ├── CMakeLists.txt    # CMake para compilar el ejecutable
-│   ├── main.c            # Código fuente de la app
-│   └── main.h            # Header de la app
-├── CMakeLists.txt        # CMake raíz que orquesta todo
+├── main/                   # Código fuente del programa principal
+│   ├── CMakeLists.txt      # CMake para compilar el ejecutable
+│   ├── main.c              # Código fuente de la app
+│   └── main.h              # Header de la app
+├── CMakeLists.txt          # CMake raíz que orquesta todo
 ├── LICENSE
 └── README.md
 ```
