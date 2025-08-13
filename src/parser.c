@@ -6,9 +6,14 @@
 #include "parser.h"
 
 static char *
-generar_operacion(){
+generar_operacion(char *buffer, Operación op){
+  /*
+   La idea de esta función es generar el string correspondiente a una
+   operación, evidentemente esta fución es recursiva y no se espera que no se
+   invoque fuera de este archivo.
+   */
 }
 
 static char *
-generar_procedimiento{
+generar_procedimiento(){
 }
