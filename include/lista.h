@@ -6,23 +6,26 @@
 
 typedef struct Nodo{
   void *dato;
-  Nodo *previo;
-  Nodo *siguiente;
+  struct Nodo *previo;
+  struct Nodo *siguiente;
 } Nodo;
+
 /*Longitud e indexado*/
-signed int largo_lista(Nodo lista);
-void *retornar_de_indice(Nodo lista, signed int indice);
+signed int largo_lista(Nodo *lista);
+void *retornar_de_indice(Nodo *lista, unsigned int indice);
 /*Destrucción de nodos y listas, usar para liberar memoria*/
-void destruir_lista(Nodo lista, void(*borrar_dato)(void));
-void destruir_nodo(Nodo nodo, void(*borrar_dato)(void));
+/*ADVERTENCIA: Si se usa un dato sin malloc, borrar_dato debe ser NULL*/
+void destruir_lista(Nodo *lista, void(*borrar_dato)(void *));
+void destruir_nodo(Nodo *nodo, void(*borrar_dato)(void *));
 /*Creación y expansión de una lista*/
-Nodo crear_lista(void);
-Nodo empujar_nodo(Nodo lista, void *valor);
-Nodo agregar_nodo(Nodo lista, void *valor);
-Nodo insertar_nodo(Nodo lista, void *valor, signed int indice);
+/*ADVERTENCIA: La actualización de la cabeza es responsabilidad del usuario*/
+Nodo *crear_lista(void);
+Nodo *empujar_nodo(Nodo *lista, void *valor);
+Nodo *agregar_nodo(Nodo *lista, void *valor);
+Nodo *insertar_nodo(Nodo *lista, void *valor, unsigned int indice);
 /*Remoción de datos de la lista, los retorna sin destruirlos*/
 /*Primero y ultimo son un poco más rápidos (y ad hoc)*/
-Nodo remover_nodo(Nodo lista, signed int indice);
-Nodo remover_primero(Nodo lista);
-Nodo remover_ultimo(Nodo lista);
+Nodo *remover_nodo(Nodo *lista, unsigned int indice);
+Nodo *remover_primero(Nodo *lista);
+Nodo *remover_ultimo(Nodo *lista);
 #endif
